@@ -11,6 +11,7 @@ import Footer from "../components/Footer/footer";
 import ScrollProgress from "../components/ui/ScrollProgress";
 import Navigationbar from "../components/ui/Navigationbar";
 import Headerimage from '../components/ui/Share/Headerimage';
+import DeviceCheck from '../components/DeviceCheck';
 // Register GSAP ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -89,6 +90,7 @@ const ServicePage = () => {
 
   return (
     <>
+    <DeviceCheck>
     <Navigationbar/>
     <ScrollProgress/>
     <Headerimage
@@ -180,6 +182,7 @@ const ServicePage = () => {
       </div>
     </div>
         <Footer />
+    </DeviceCheck>
     </>
   );
 };

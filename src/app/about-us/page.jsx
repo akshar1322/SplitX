@@ -8,6 +8,7 @@ import AnimatedSVG from '../components/ui/Share/AnimatedSVG';
 import Footer from '../components/Footer/footer';
 import AnimatedImage from '../components/ui/Share/AnimatedImage';
 import Headerimage from '../components/ui/Share/Headerimage';
+import DeviceCheck from '../components/DeviceCheck';
 
 // paragraphs data
 const storyParagraphs = [
@@ -61,7 +62,8 @@ const AboutUs = () => {
 
   return (
     // main container
-    <main className='bg-black' >
+    <DeviceCheck>
+      <main className='bg-black' >
       {/* header */}
       <Navigationbar />
       <Headerimage
@@ -123,6 +125,7 @@ const AboutUs = () => {
       <Footer />
       {/* footer */}
     </main>
+    </DeviceCheck>
   );
 };
 
