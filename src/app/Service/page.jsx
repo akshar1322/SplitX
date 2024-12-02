@@ -42,8 +42,8 @@ const servicesData = [
 ];
 
 const projects = [
-  { id: 1, name: 'Bright', description: 'Logo, Branding, E-commerce, UX/UI', imageUrl: 'https://images.unsplash.com/photo-1649864731714-1363b5c4456c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-  { id: 2, name: 'Bright', description: 'Logo, Branding, E-commerce, UX/UI', imageUrl: 'https://images.unsplash.com/photo-1646337429098-614b89a97b99?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+  { id: 1, name: 'B&Y', description: 'Logo, Branding, E-commerce, UX/UI', imageUrl: '/Projects/B&Y-2.jpg' },
+  { id: 2, name: 'Sounds Scape', description: 'Logo, Web&Apps, Music, UX/UI', imageUrl: '/Projects/Sounds-scape-2.jpg' },
 ];
 
 const ServicePage = () => {

@@ -7,15 +7,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Clients = () => {
   const clientLogos = [
-    { id: 1, image: "https://images.unsplash.com/photo-1649864735667-300c31f0e5f2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", link: "https://client-1.com" },
-    { id: 2, image: "https://images.unsplash.com/photo-1649864735667-300c31f0e5f2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", link: "https://client-2.com" },
-    { id: 3, image: "https://images.unsplash.com/photo-1649864735667-300c31f0e5f2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", link: "https://client-3.com" },
-    { id: 4, image: "https://images.unsplash.com/photo-1649864735667-300c31f0e5f2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", link: "https://client-4.com" },
-    { id: 5, image: "https://images.unsplash.com/photo-1649864735667-300c31f0e5f2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", link: "https://client-5.com" },
-    { id: 6, image: "https://images.unsplash.com/photo-1649864735667-300c31f0e5f2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", link: "https://client-6.com" },
-    { id: 7, image: "https://images.unsplash.com/photo-1649864735667-300c31f0e5f2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", link: "https://client-7.com" },
-    { id: 8, image: "https://images.unsplash.com/photo-1649864735667-300c31f0e5f2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", link: "https://client-8.com" },
-    { id: 9, image: "https://images.unsplash.com/photo-1649864735667-300c31f0e5f2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", link: "https://client-9.com" },
+    { id: 1, image: "./SVG/B&Y.svg", link: "/" },
+    { id: 2, image: "./SVG/entire games.svg", link: "/" },
+    { id: 3, image: "./SVG/Invoice Mate.svg", link: "/" },
+    { id: 4, image: "./SVG/Sounds scape.svg", link: "/" },
+    { id: 5, image: "./SVG/VipBachchu.svg", link: "/" },
+    { id: 6, image: "./SVG/Wobble Chat.svg", link: "/" },
+
   ];
 
   useEffect(() => {
@@ -77,7 +75,7 @@ const Clients = () => {
           {clientLogos.map((client) => (
             <Link key={client.id} href={client.link} passHref>
               <div
-                className="relative w-fit h-fit cursor-pointer rounded-lg opacity-70 hover:opacity-100 transition-opacity duration-300 client-logo"
+                className="relative w-fit h-36 cursor-pointer rounded-lg opacity-70 hover:opacity-100 transition-opacity duration-300 client-logo"
                 onClick={() => window.open(client.link, "_blank")}
               >
                 <Image

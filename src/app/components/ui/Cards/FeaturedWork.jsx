@@ -47,24 +47,24 @@ const FeaturedWork = () => {
   const projects = [
     {
       id: 1,
-      title: "Project One",
-      description: "Website Design, Branding",
+      title: "Invoice-Mate",
+      description: "WebApp Development, Management and tracking",
       link: "/projects/1",
-      image: "/Image/Image-hero/1.jpg", // Example image path
+      image: "/Projects/Invoice-Mate.svg", // Example image path
     },
     {
       id: 2,
-      title: "Project Two",
-      description: "App Development, UI/UX",
+      title: "Wobble Chat",
+      description: "ChatingApp Development, UI/UX",
       link: "/projects/2",
-      image: "/Image/Image-hero/2.jpg", // Example image path
+      image: "/Projects/Wobble-Chat.svg", // Example image path
     },
     {
       id: 3,
-      title: "Project Three",
-      description: "Photography, Branding",
+      title: "Entire Games",
+      description: "Gaming Studio Development, UI/UX",
       link: "/project-three",
-      image: "https://images.unsplash.com/photo-1646337426453-d6d57937fc3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Example image path
+      image: "/Projects/entire-games.svg", // Example image path
     },
   ];
 
