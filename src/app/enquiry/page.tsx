@@ -96,16 +96,17 @@ const Contact: React.FC = () => {
         <Navigationbar />
         <ScrollProgress />
         <Headerimage
-        backgroundImageUrl="https://images.unsplash.com/photo-1646337426453-d6d57937fc3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" text="Make Enquiry" />
+        backgroundImageUrl="https://images.unsplash.com/photo-1646337426453-d6d57937fc3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        text="Make Enquiry"  />
 
         <div className="relative h-full">
           <div
-            className="absolute inset-0 bg-cover bg-black bg-center"
+            className="absolute inset-0 bg-cover w-full h-full p-4 bg-black bg-center"
             style={{
-              backgroundImage: "url(../Image/Image-hero/ThankYouBackground.jpg)",
+              backgroundImage: "url(https://images.unsplash.com/photo-1649864735550-ba62b65226a9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)", 
               backgroundAttachment: "fixed",
             }}
-          />
+           />
           <div className="relative z-10 flex items-center justify-center h-full bg-transparent bg-opacity-60 backdrop-blur-lg">
             <div className="w-full max-w-4xl p-8 bg-transparent rounded-lg">
               <h1 className="text-4xl text-white font-PoppinsBold text-center mb-6">
