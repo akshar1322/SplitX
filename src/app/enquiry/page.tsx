@@ -96,7 +96,9 @@ const Contact: React.FC = () => {
       <main className="bg-transparent font-PoppinsRegular">
         <Navigationbar />
         <ScrollProgress />
-
+        <Headerimage
+        backgroundImageUrl="https://images.unsplash.com/photo-1646337426453-d6d57937fc3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        text="Make Enquiry"  />
 
         <div className="relative h-full">
           <div
