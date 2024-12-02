@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -18,4 +39,124 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* fonts */
+@layer base {
+  @font-face {
+    font-family: "Poppins-Medium"; /* Name of your custom font */
+    font-weight: 400; /* Font weight (normal) */
+    src: url("./fonts/Poppins/Poppins-Medium.ttf")
+      format('woff'); /* Font source and format */
+  }
+  @font-face
+  {
+    font-family: "Poppins-SemiBold"; /* Name of your custom font */
+    font-weight: 600; /* Font weight (semi-bold) */
+    src: url("./fonts/Poppins/Poppins-SemiBold.ttf")
+    format('woff'); /* Font source and format */
+    }
+    @font-face
+  {
+    font-family: "Poppins-Black"; /* Name of your custom font */
+    font-weight: 600; /* Font weight (Black) */
+    src: url("./fonts/Poppins/Poppins-Black.ttf")
+    format('woff'); /* Font source and format */
+    }
+    @font-face
+    {
+      font-family: "Poppins-Thin"; /* Name of your custom font */
+      font-weight: 600; /* Font weight (Thin) */
+      src: url("./fonts/Poppins/Poppins-Thin.ttf")
+      format('woff'); /* Font source and format */
+      }
+      @font-face
+    {
+      font-family: "Poppins-Regular"; /* Name of your custom font */
+      font-weight: 600; /* Font weight (Regular) */
+      src: url("./fonts/Poppins/Poppins-Regular.ttf")
+      format('woff'); /* Font source and format */
+      }
+
+      @font-face
+    {
+      font-family: "Poppins-Light"; /* Name of your custom font */
+      font-weight: 600; /* Font weight (Light) */
+      src: url("./fonts/Poppins/Poppins-Light.ttf")
+      format('woff'); /* Font source and format */
+      }
+      @font-face
+    {
+      font-family: "Poppins-ExtraLight"; /* Name of your custom font */
+      font-weight: 600; /* Font weight (ExtraLight) */
+      src: url("./fonts/Poppins/Poppins-ExtraLight.ttf")
+      format('woff'); /* Font source and format */
+      }
+      @font-face
+    {
+      font-family: "Poppins-Bold"; /* Name of your custom font */
+      font-weight: 600; /* Font weight (Bold) */
+      src: url("./fonts/Poppins/Poppins-Bold.ttf")
+      format('woff'); /* Font source and format */
+      }
+      @font-face
+    {
+      font-family: "Poppins-ExtraBold"; /* Name of your custom font */
+      font-weight: 600; /* Font weight (ExtraBold) */
+      src: url("./fonts/Poppins/Poppins-ExtraBold.ttf")
+      format('woff'); /* Font source and format */
+      }
+      @font-face
+    {
+      font-family: "Poppins-Light"; /* Name of your custom font */
+      font-weight: 600; /* Font weight (Light) */
+      src: url("./fonts/Poppins/Poppins-Light.ttf")
+      format('woff'); /* Font source and format */
+      }
+      @font-face
+      {
+        font-family: "barlow-typo-des-bois"; /* Name of your custom font */
+        font-weight: 600; /* Font weight (Medium) */
+        src: url("./fonts/barlow-typo-des-bois/Barlow-TypoDesBois.ttf")
+        format('woff'); /* Font source and format */
+        }
+
+}
+
+
+
+.menu-overlay {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.clip-path-polygon-closed {
+  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+}
+.bg-glass {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.glass-background {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.glass-background-blue-violet {
+  background: rgba(138, 43, 226, 0.1);
+  backdrop-filter: blur(10px);
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-background-blue {
+  background: rgba(129, 11, 239, 0.1);
+  backdrop-filter: blur(10px);
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.image-hover:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
