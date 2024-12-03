@@ -19,10 +19,10 @@ const TextSlidingEffect = ({ title = "Experiences" }) => {
         scroller: "body",
         markers: false,
         start: "top 0%",
-        end: "top -950%", // Dynamically calculate end point
+        end: "top -900%", // Dynamically calculate end point
         scrub: 2,
         pin: true,
-        snap: true
+        
       },
     });
   }, []);
