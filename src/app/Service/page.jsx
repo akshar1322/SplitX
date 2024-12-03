@@ -49,7 +49,7 @@ const projects = [
 
 const ServicePage = () => {
   useEffect(() => {
-    document.title = 'Service | SPLIXTECH';
+    document.title = 'Service | SPLIX';
     // GSAP ScrollTrigger for service sections
     servicesData.forEach((_, index) => {
       gsap.fromTo(

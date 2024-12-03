@@ -76,7 +76,7 @@ const Navigationbar = () => {
                   ? "/SVG/SplitXlogo-Main-black.svg"
                   : "/SVG/SplitXlogo-Main-black.svg"
               }
-              alt="SpliXtech"
+              alt="SpliX"
               width={100}
               height={60}
               className="transition-transform duration-300 ease-in-out"

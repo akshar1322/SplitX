@@ -115,7 +115,7 @@ const HeroSection = () => {
       {/* Fixed Header */}
       <div className="fixed top-0 left-0 w-full min-h-screen max-h-screen flex flex-col items-center justify-center text-lime-500 font-Poppins reveal z-10 px-4 sm:px-10">
         <h1 className="text-5xl sm:text-7xl lg:text-9xl font-bold font-barlowtypodesbois uppercase mb-4 text-center">
-          Splitx Tech <sup className="font-PoppinsThin">®</sup>
+          Splix <sup className="font-PoppinsThin">®</sup>
         </h1>
         <h2 className="text-2xl sm:text-4xl lg:text-5xl font-barlowtypodesbois font-light">
           明日も今日も革新する

@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
   const [showThankYou, setShowThankYou] = useState(false);
 
   useEffect(() => {
-    document.title = 'Enquiry | SPLIXTECH';
+    document.title = 'Enquiry | SPLIX';
     // Check localStorage to determine if the thank-you message should be shown
     const isSubmitted = localStorage.getItem("formSubmitted");
     if (isSubmitted === "true") {

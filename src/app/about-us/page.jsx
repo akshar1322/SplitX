@@ -18,7 +18,7 @@ const storyParagraphs = [
   },
   {
     id: 2,
-    story: 'At SPLIXTECH, we focus on crafting innovative and robust digital solutions, ensuring client satisfaction through every project phase.',
+    story: 'At SPLIX, we focus on crafting innovative and robust digital solutions, ensuring client satisfaction through every project phase.',
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const storyParagraphs = [
 // AboutUs page
 const AboutUs = () => {
   useEffect(() => {
-    document.title = 'About Us | SPLIXTECH';
+    document.title = 'About Us | TECH';
 
     // Register ScrollTrigger with GSAP
     gsap.registerPlugin(ScrollTrigger);
@@ -76,7 +76,7 @@ const AboutUs = () => {
         <div className="flex flex-col md:flex-row items-center md:items-start my-12">
           <div className="md:w-1/2 p-10">
             <h2 className="text-5xl font-neopixelregular font-semibold reveal-heading">
-              SPLIXTECH
+              SPLIX
             </h2>
             <p className="mt-4 reveal-text">
               Discover our journey and commitment to delivering exceptional solutions in web development, software, mobile apps, UI/UX design, and AI/ML.
@@ -97,7 +97,7 @@ const AboutUs = () => {
         </div>
         <div className="my-8">
           <h2 className="text-3xl font-bold text-center reveal-heading">
-            SPLIXTECH, transforming the digital landscape with cutting-edge web development, AI, ML, advanced software solutions, exceptional UI/UX design, and 3D product design, in partnership with Redmagic Studio.
+            SPLIX, transforming the digital landscape with cutting-edge web development, AI, ML, advanced software solutions, exceptional UI/UX design, and 3D product design, in partnership with Redmagic Studio.
           </h2>
         </div>
 
