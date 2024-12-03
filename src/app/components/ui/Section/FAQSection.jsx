@@ -3,16 +3,24 @@ import { useState } from 'react';
 
 const faqData = [
   {
-    question: "How many services do you provide?",
-    answer: "We offer a wide range of services to meet your needs. Currently, we provide services in: Web Development, UI/UX Design, Software Development, Graphic Design, and Website Maintenance.",
+    question: "What makes Splix stand out from other agencies?",
+    answer: "At Splix, we combine innovation, expertise, and a user-first approach to deliver results that truly make an impact. Our dedicated team focuses on crafting unique solutions tailored to your business needs, ensuring exceptional quality and measurable outcomes.",
   },
   {
-    question: "What is included in your pricing?",
-    answer: "Our pricing includes a comprehensive package tailored to your needs. Each service package covers Initial Consultation, Project Planning and Management, Implementation and Development, Quality Assurance and Testing, and Post-Launch Support.",
+    question: "I love your work! How can I get started on a project?",
+    answer: "Starting a project with us is simple! Just reach out via our contact form, email, or phone. We'll schedule a consultation to understand your requirements and guide you through the next steps.",
   },
   {
-    question: "Can I customize my service package?",
-    answer: "Yes, we offer customization options for all our service packages. Contact us to discuss your specific requirements and we’ll tailor a package that suits your needs.",
+    question: "What services does Splix offer?",
+    answer: "We specialize in a wide range of services, including: Web application development,UI/UX design,Mobile application development,Digital marketing strategies,Branding and creative services.",
+  },
+  {
+    question: "What is Splix's core strategy?",
+    answer: "Our core strategy revolves around understanding your goals, leveraging the latest technologies, and delivering tailored solutions that drive growth and success. We prioritize collaboration, transparency, and a results-driven approach.",
+  },
+  {
+    question: "What information do you need to start a project?",
+    answer: "To kickstart your project, we typically need: A clear project brief or idea,Your objectives and target audience,Any existing assets (logos, branding guidelines, etc.),Preferred timeline and budget considerations",
   },
 ];
 

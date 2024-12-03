@@ -135,7 +135,7 @@ const ServicePage = () => {
                 {service.tags.map((tag, i) => (
                   <button
                     key={i}
-                    className="relative px-8 font-PoppinsThin py-2 rounded-full  isolation-auto z-10 border border-white
+                    className="relative px-10 font-PoppinsSemiBold py-2 rounded-full  isolation-auto z-10 border border-white
                       before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-right-full
                       before:hover:right-0 before:rounded-full before:bg-lime-500 before:-z-10 before:aspect-square
                       before:hover:scale-150 overflow-hidden before:hover:duration-700 text-white font-semibold"

@@ -8,7 +8,8 @@ import Clients from "./components/ui/Section/Client"
 import WhereCreativityThrives from "./components/ui/Section/WhereCreativityThrives"
 import Navigationbar from "./components/ui/Navigationbar";
 import DeviceCheck from "./components/DeviceCheck";
-// data
+import TextSlidingEffect from "./components/ui/Section/TextSlidingEffect"
+
 
 
 
@@ -21,9 +22,12 @@ export default function Home() {
         <ScrollProgress/>
         <Hero/>
 
-        <div className="relative z-30 ">
+        <div className="relative z-30 no-scrollbar overflow-hidden bg-black ">
 
         <FeaturedWork />
+        <TextSlidingEffect
+        title="Innovating today and tomorrow"
+        />
         <Clients/>
         {/* <WhereCreativityThrives /> */}
         <Footer />
