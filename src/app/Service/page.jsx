@@ -12,6 +12,7 @@ import ScrollProgress from "../components/ui/ScrollProgress";
 import Navigationbar from "../components/ui/Navigationbar";
 import Headerimage from '../components/ui/Share/Headerimage';
 import DeviceCheck from '../components/DeviceCheck';
+import PartnerCarousel from '../components/ui/Share/Partners';
 // Register GSAP ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -148,7 +149,7 @@ const ServicePage = () => {
           </div>
         ))}
       </div>
-
+          <PartnerCarousel/>
       {/* Image Reveal Animation */}
       <div className="min-h-screen pl-10  overflow-hidden bg-black text-white flex items-center justify-center">
         <AnimatedImage

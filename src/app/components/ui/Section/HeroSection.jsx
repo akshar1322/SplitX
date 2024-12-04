@@ -139,7 +139,7 @@ const HeroSection = () => {
           <div className="mt-8">
             <HButton
               text="let's go!"
-              link="https://example.com"
+              link="https://wa.me/6352191174"
               newTab={true}
             />
           </div>

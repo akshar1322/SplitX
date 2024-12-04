@@ -41,9 +41,10 @@ const FAQSection = () => {
               className="flex items-center justify-between py-4 cursor-pointer"
               onClick={() => toggleAnswer(index)}
             >
+              {/* this is change 900 to 500 */}
               <h3 className="text-xl font-medium">{item.question}</h3>
               <svg
-                className={`w-6 h-6 transform transition-transform text-lime-900 ${openIndex === index ? 'rotate-180' : ''}`}
+                className={`w-6 h-6 transform transition-transform  text-lime-900 ${openIndex === index ? 'rotate-180' : ''}`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

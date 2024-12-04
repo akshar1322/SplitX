@@ -14,6 +14,7 @@ import TextSlidingEffect from "./components/ui/Section/TextSlidingEffect"
 
 
 
+
 export default function Home() {
   return (
     <>
@@ -29,6 +30,7 @@ export default function Home() {
         title="Innovating today and tomorrow"
         />
         <Clients/>
+       
         {/* <WhereCreativityThrives /> */}
         <Footer />
 

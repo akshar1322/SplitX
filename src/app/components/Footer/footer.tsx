@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
               <ul>
                 {section.links.map((link) => (
                   <li key={link.name} className="mb-2 cursor-pointer hover:translate-x-1 transition-transform duration-300">
-                    <Link className="hover:text-lime-500 text-xl" href={link.href}>
+                    <Link className="hover:text-lime-500 text-2xl" target="_blank" href={link.href}>
                       {link.name}
                     </Link>
                   </li>
@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
 
       {/* Bottom Copyright and Info */}
       <div className="flex flex-col md:flex-row justify-between items-center mt-8 font-PoppinsMedium text-sm text-gray-500 space-y-4 md:space-y-0">
-        <p>SPLIX | V SX-ACT 2.1.5</p>
+        <p>SPLIX | V SX-ACT 2.1.6</p>
         <p>All rights reserved | 2024</p>
         <div className="flex items-center  space-x-3">
           <span className="transform rotate-180 font-PoppinsThin transition-transform duration-300">🌐</span>

@@ -120,21 +120,21 @@ const Navigationbar = () => {
           {/* Social Links & Close Button */}
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 w-full mt-8">
             <div className="flex flex-col text-lg md:text-2xl space-y-2 tracking-wider text-lime-500">
-              <Link href="https://x.com/Akshar_patel_13" className="group">
+              <Link href="https://x.com/Akshar_patel_13" target="_blank" className="group">
                 X <span className="transform transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-45">&#8599;</span>
               </Link>
-              <Link href="https://www.instagram.com/_akshar.x" className="group">
+              <Link href="https://www.instagram.com/_akshar.x" target="_blank" className="group">
                 Instagram <span className="transform transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-45">&#8599;</span>
               </Link>
-              <Link href="https://www.behance.net/aksharpatel24" className="group">
+              <Link href="https://www.behance.net/aksharpatel24" target="_blank" className="group">
                 Behance <span className="transform transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-45">&#8599;</span>
               </Link>
-              <Link href="https://www.linkedin.com/in/akshar-patel-4a78b0217" className="group">
+              <Link href="https://www.linkedin.com/in/akshar-patel-4a78b0217"  target="_blank" className="group">
                 LinkedIn <span className="transform transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-45">&#8599;</span>
               </Link>
             </div>
             <div className="flex flex-col text-xl font-neopixelregular tracking-wider md:text-3xl space-y-2 text-lime-500">
-              <Link href="https://wa.me/916352191174" className="group">
+              <Link href="https://wa.me/916352191174" target="_blank" className="group">
                 WhatsApp <span className="transform transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-45">&#8599;</span>
               </Link>
             </div>
