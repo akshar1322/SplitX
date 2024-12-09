@@ -10,16 +10,16 @@ import AnimatedSVG from "../components/ui/Share/AnimatedSVG";
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
     email: "",
-    consent: false,
-    whatsappAvailable: "no",
-    whatsappNumber: "",
+    phone: "",
     currentWebsite: "",
     interest: "",
     foundUs: "",
-    message: "",
     beverage: "",
+    whatsappAvailable: "no",
+    whatsappNumber: "",
+    message: "",
+    consent: false,
   });
 
   const [status, setStatus] = useState<string | null>(null);
@@ -54,9 +54,7 @@ const Contact: React.FC = () => {
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
 
@@ -64,19 +62,6 @@ const Contact: React.FC = () => {
 
       if (response.ok) {
         setStatus("Message sent successfully");
-        setFormData({
-          name: "",
-          phone: "",
-          email: "",
-          consent: false,
-          whatsappAvailable: "no",
-          whatsappNumber: "",
-          currentWebsite: "",
-          interest: "",
-          foundUs: "",
-          message: "",
-          beverage: "",
-        });
         setShowThankYou(true);
         localStorage.setItem("formSubmitted", "true");
       } else {
@@ -93,13 +78,13 @@ const Contact: React.FC = () => {
         <Navigationbar />
         <ScrollProgress />
         <Headerimage
-          backgroundImageUrl="https://images.unsplash.com/photo-1646337426453-d6d57937fc3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          backgroundImageUrl="https://images.unsplash.com/photo-1646337426453-d6d57937fc3f?q=80&w=2070&auto=format&fit=crop"
           text="Make Enquiry"
         />
-      <AnimatedSVG/>
+        <AnimatedSVG />
         <div className="relative h-screen">
           <div
-            className="absolute rounded-3xl inset-0 bg-cover bg-center opacity-55 bg-black/70"
+            className="absolute inset-0 bg-cover rounded-3xl bg-center bg-black/70"
             style={{
               backgroundImage: "url(https://images.unsplash.com/photo-1649864735550-ba62b65226a9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
               backgroundAttachment: "fixed",
@@ -114,7 +99,7 @@ const Contact: React.FC = () => {
                 Your message has been received. Our team will get back to you shortly. Have a wonderful day!
               </p>
               <button
-                className="block mx-auto mt-6 px-8 py-4 text-lg font-semibold bg-lime-500 text-white rounded-full hover:bg-lime-600 transition-all duration-300"
+                className="block mx-auto mt-6 px-8 py-4 text-lg font-semibold bg-lime-500 text-black rounded-full hover:bg-lime-700 transition-all hover:text-cyan-50 duration-300"
                 onClick={() => window.location.href = '/'}
               >
                 Go Back to Homepage
@@ -132,11 +117,61 @@ const Contact: React.FC = () => {
       <main className="bg-transparent font-PoppinsRegular">
         <Navigationbar />
         <Headerimage
-          backgroundImageUrl="https://images.unsplash.com/photo-1646337426453-d6d57937fc3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          backgroundImageUrl="https://images.unsplash.com/photo-1646337426453-d6d57937fc3f?q=80&w=2070&auto=format&fit=crop"
           text="Make Enquiry"
         />
         <ScrollProgress />
-        {/* Form content */}
+        <div className="relative z-10 flex items-center justify-center h-full bg-transparent bg-opacity-60 backdrop-blur-lg">
+          <div className="w-full max-w-5xl p-8 bg-transparent rounded-lg">
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              {/** Form fields **/}
+              <div>
+                <label className="block text-lime-500">Your Name</label>
+                <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Your Name" className="w-full px-4 py-3 border border-gray-300 rounded-full" />
+              </div>
+              <div>
+                <label className="block text-lime-500">Your Email</label>
+                <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" className="w-full px-4 py-3 border border-gray-300 rounded-full" />
+              </div>
+              <div>
+                <label className="block text-lime-500">Phone Number</label>
+                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone Number" className="w-full px-4 py-3 border border-gray-300 rounded-full" />
+              </div>
+              <div>
+                <label className="block text-lime-500">Current Website</label>
+                <input type="text" name="currentWebsite" value={formData.currentWebsite} onChange={handleChange} placeholder="Current Website" className="w-full px-4 py-3 border border-gray-300 rounded-full" />
+              </div>
+
+              <div>
+                <label className="block text-lime-500">Your Interest</label>
+                <select name="interest" value={formData.interest} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-full">
+                  <option value="">Select</option>
+                  <option value="website-development">Website Development</option>
+                  <option value="app-development">App Development</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-lime-500">Where did you find us?</label>
+                <select name="foundUs" value={formData.foundUs} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-full">
+                  <option value="">Select</option>
+                  <option value="google">Via Google</option>
+                </select>
+              </div>
+
+              <div>
+                <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Your Message" className="w-full px-4 py-3 border border-gray-300 rounded-xl"></textarea>
+              </div>
+
+              <div className="flex justify-center space-x-4">
+                <button type="submit" className="px-8 py-2 rounded-full text-white font-semibold bg-lime-500">
+                  Submit
+                </button>
+              </div>
+              {status && <p className="text-center text-lg mt-6">{status}</p>}
+            </form>
+          </div>
+        </div>
         <Footer />
       </main>
     </DeviceCheck>

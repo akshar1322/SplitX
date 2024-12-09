@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
 
       {/* Bottom Copyright and Info */}
       <div className="flex flex-col md:flex-row justify-between items-center mt-8 font-PoppinsMedium text-sm text-gray-500 space-y-4 md:space-y-0">
-        <p>SPLIX | V SX-ACT 2.1.7</p>
+        <p>SPLIX | V SX-ACT 2.1.8</p>
         <p>All rights reserved | 2024</p>
         <div className="flex items-center  space-x-3">
           <span className="transform rotate-180 font-PoppinsThin transition-transform duration-300">🌐</span>
