@@ -121,50 +121,140 @@ const Contact: React.FC = () => {
           text="Make Enquiry"
         />
         <ScrollProgress />
+        <AnimatedSVG />
         <div className="relative z-10 flex items-center justify-center h-full bg-transparent bg-opacity-60 backdrop-blur-lg">
           <div className="w-full max-w-5xl p-8 bg-transparent rounded-lg">
-            <form className="space-y-6" onSubmit={handleSubmit}>
-              {/** Form fields **/}
+          <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-lime-500">Your Name</label>
-                <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Your Name" className="w-full px-4 py-3 border border-gray-300 rounded-full" />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:border-orange-500 text-gray-900"
+                />
               </div>
               <div>
                 <label className="block text-lime-500">Your Email</label>
-                <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" className="w-full px-4 py-3 border border-gray-300 rounded-full" />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:border-orange-500 text-gray-900"
+                />
               </div>
               <div>
                 <label className="block text-lime-500">Phone Number</label>
-                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone Number" className="w-full px-4 py-3 border border-gray-300 rounded-full" />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:border-orange-500 text-gray-900"
+                />
               </div>
               <div>
                 <label className="block text-lime-500">Current Website</label>
-                <input type="text" name="currentWebsite" value={formData.currentWebsite} onChange={handleChange} placeholder="Current Website" className="w-full px-4 py-3 border border-gray-300 rounded-full" />
+                <input
+                  type="text"
+                  name="currentWebsite"
+                  placeholder="Current Website"
+                  value={formData.currentWebsite}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:border-orange-500 text-gray-900"
+                />
               </div>
-
               <div>
-                <label className="block text-lime-500">Your Interest</label>
-                <select name="interest" value={formData.interest} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-full">
+                <label className="block text-lime-500">What is your interest?</label>
+                <select
+                  name="interest"
+                  value={formData.interest}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:border-orange-500 text-gray-900"
+                >
                   <option value="">Select</option>
+                  <option value="ecommerce">Ecommerce</option>
                   <option value="website-development">Website Development</option>
                   <option value="app-development">App Development</option>
+                  <option value="domains-hosting">Domains and Hosting</option>
+                  <option value="just-meet">Just Meet</option>
+                  <option value="works-with-splix">Works with Splix</option>
                 </select>
               </div>
-
               <div>
                 <label className="block text-lime-500">Where did you find us?</label>
-                <select name="foundUs" value={formData.foundUs} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-full">
+                <select
+                  name="foundUs"
+                  value={formData.foundUs}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:border-orange-500 text-gray-900"
+                >
                   <option value="">Select</option>
                   <option value="google">Via Google</option>
+                  <option value="friend">Via Friend</option>
+                  <option value="ads">Via Ads</option>
+                  <option value="recently-met">We have met recently</option>
+                  <option value="suggestions">Via Suggestions</option>
                 </select>
               </div>
-
               <div>
-                <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Your Message" className="w-full px-4 py-3 border border-gray-300 rounded-xl"></textarea>
+                <label className="block text-lime-500">Choose Your Beverage</label>
+                <select
+                  name="beverage"
+                  value={formData.beverage}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:border-orange-500 text-gray-900"
+                >
+                  <option value="">Select</option>
+                  <option value="masala-chai">Masala Chai</option>
+                  <option value="kulhad-chai">Kulhad Chai</option>
+                  <option value="coffee">Coffee</option>
+                  <option value="bournvita">Bournvita</option>
+                </select>
               </div>
-
+              <div>
+                <label className="block text-lime-500">WhatsApp Available?</label>
+                <select
+                  name="whatsappAvailable"
+                  value={formData.whatsappAvailable}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:border-orange-500 text-gray-900"
+                >
+                  <option value="no">No</option>
+                  <option value="yes">Yes</option>
+                </select>
+              </div>
+              {formData.whatsappAvailable === "yes" && (
+                <div>
+                  <input
+                    type="text"
+                    name="whatsappNumber"
+                    placeholder="Add your WhatsApp number"
+                    value={formData.whatsappNumber}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:border-orange-500 text-gray-900"
+                  />
+                </div>
+              )}
+              <div>
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-orange-500 text-gray-900"
+                />
+              </div>
               <div className="flex justify-center space-x-4">
-                <button type="submit" className="px-8 py-2 rounded-full text-white font-semibold bg-lime-500">
+                <button
+                  type="submit"
+                  className="relative px-8 py-2 rounded-full text-white font-semibold bg-lime-500"
+                >
                   Submit
                 </button>
               </div>
