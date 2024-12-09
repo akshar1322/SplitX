@@ -29,7 +29,7 @@ const storyParagraphs = [
 // AboutUs page
 const AboutUs = () => {
   useEffect(() => {
-    document.title = 'About Us | TECH';
+    document.title = 'About Us | SPLIX';
 
     // Register ScrollTrigger with GSAP
     gsap.registerPlugin(ScrollTrigger);
