@@ -6,8 +6,12 @@ import Navigationbar from "../components/ui/Navigationbar";
 import Headerimage from "../components/ui/Share/Headerimage";
 import DeviceCheck from "../components/DeviceCheck";
 import AnimatedSVG from "../components/ui/Share/AnimatedSVG";
+import useDisableInspect from "../hooks/disableInspect";
+import useDisableRightClick from "../hooks/useDisableRightClick";
 
 const Contact: React.FC = () => {
+  useDisableInspect()
+  useDisableRightClick()
   const [formData, setFormData] = useState({
     name: "",
     email: "",

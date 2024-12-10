@@ -13,6 +13,8 @@ import Navigationbar from "../components/ui/Navigationbar";
 import Headerimage from '../components/ui/Share/Headerimage';
 import DeviceCheck from '../components/DeviceCheck';
 import PartnerCarousel from '../components/ui/Share/Partners';
+import useDisableInspect from '../hooks/disableInspect';
+import useDisableRightClick from '../hooks/useDisableRightClick';
 // Register GSAP ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,6 +51,8 @@ const projects = [
 ];
 
 const ServicePage = () => {
+  useDisableInspect()
+  useDisableRightClick()
   useEffect(() => {
     document.title = 'Service | SPLIX';
     // GSAP ScrollTrigger for service sections

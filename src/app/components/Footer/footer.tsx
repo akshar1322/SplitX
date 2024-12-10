@@ -1,11 +1,11 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { FaTwitter, FaInstagram, FaLinkedinIn, FaCookieBite } from "react-icons/fa";
-
 import Link from "next/link";
 import gsap from "gsap";
 
 const Footer: React.FC = () => {
+  const [currentYear, setCurrentYear] = useState<number>(new Date().getFullYear());
   const footerContentRef = useRef<HTMLDivElement>(null);
   const scaleRef = useRef<HTMLDivElement>(null);
 
@@ -113,9 +113,9 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Copyright and Info */}
-      <div className="flex flex-col md:flex-row justify-between items-center mt-8 font-PoppinsMedium text-sm text-gray-500 space-y-4 md:space-y-0">
-        <p>SPLIX | V SX-ACT 2.1.9</p>
-        <p>All rights reserved | 2024</p>
+      <div className="flex flex-col md:flex-row justify-between items-center mt-8 font-PoppinsMedium text-sm text-gray-500 space-y-4  uppercase md:space-y-0">
+        <p> V SX-ACT 2.2.1</p>
+        <p> © {currentYear} Splix llc. All rights reserved.</p>
         <div className="flex items-center  space-x-3">
           <span className="transform rotate-180 font-PoppinsThin transition-transform duration-300">🌐</span>
           <p className="text-lg md:text-2xl">Based in India</p>

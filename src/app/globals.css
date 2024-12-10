@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+  user-select: none;
+}
 
 ::selection {
   background-color: #84cc16; /* Lime green 500 */
