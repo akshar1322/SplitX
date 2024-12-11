@@ -99,7 +99,7 @@ const AboutUs = () => {
             {/* Left Column */}
             <div className=" col-auto space-y-4">
               <p  >
-                <strong className='p-5' >Name:</strong> Splix
+                <strong className='p-5 uppercase' >Name:</strong> Splix LLC.
               </p>
               <p>
                 <strong className='p-5'>Address:</strong> A-25/1, Gokul Nagar, near Jadshwar Mahdev Temple,

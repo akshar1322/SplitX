@@ -9,7 +9,7 @@ const Poppins = localFont({
 });
 
 export const metadata = {
-  title: "Splitx",
+  title: "SPLIX",
   description: "",
 };
 
