@@ -257,7 +257,7 @@ const Contact: React.FC = () => {
               <div className="flex justify-center space-x-4">
                 <button
                   type="submit"
-                  className="relative px-8 py-2 rounded-full text-white font-semibold bg-lime-500"
+                  className="relative block mx-auto mt-6 px-8 py-4 text-lg font-semibold bg-lime-500 text-black rounded-full hover:bg-lime-700 transition-all hover:text-cyan-50 duration-300"
                 >
                   Submit
                 </button>

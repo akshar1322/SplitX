@@ -85,12 +85,12 @@ const Navigationbar = () => {
         </div>
 
         {/* Menu Icon with 'Menu' Text */}
-        <div className="flex items-center cursor-pointer" onClick={handleMenuClick}>
-          <FaBars size={35} className={`${isDarkSection ? 'text-lime-500' : 'text-lime-500'}`} />
+        <div className="flex items-center cursor-pointer hover:text-white" onClick={handleMenuClick}>
+          <FaBars size={35} className={`${isDarkSection ? 'text-lime-500' : 'text-lime-500  '}`} />
           <span
             className={`ml-2 text-lg font-semibold transition-transform duration-300 ${
               isDarkSection ? 'text-lime-500' : 'text-lime-500'
-            } hover:scale-110`}
+            } hover:scale-110 hover:text-white `}
           >
             Menu
           </span>
@@ -118,27 +118,27 @@ const Navigationbar = () => {
           </div>
 
           {/* Social Links & Close Button */}
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 w-full mt-8">
-            <div className="flex flex-col text-lg md:text-2xl space-y-2 tracking-wider text-lime-500">
-              <Link href="https://x.com/Akshar_patel_13" target="_blank" className="group">
-                X <span className="transform transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-45">&#8599;</span>
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 w-full mt-8 ">
+            <div className="flex flex-col text-lg md:text-2xl space-y-2 tracking-wider text-lime-500 ">
+              <Link href="https://x.com/Akshar_patel_13" target="_blank" className="group hover:text-white ">
+                X <span className="transform transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-45  hover:text-white  ">&#8599;</span>
               </Link>
-              <Link href="https://www.instagram.com/_akshar.x" target="_blank" className="group">
-                Instagram <span className="transform transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-45">&#8599;</span>
+              <Link href="https://www.instagram.com/_akshar.x" target="_blank" className="group hover:text-white ">
+                Instagram <span className="transform transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-45 hover:text-white ">&#8599;</span>
               </Link>
-              <Link href="https://www.behance.net/aksharpatel24" target="_blank" className="group">
-                Behance <span className="transform transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-45">&#8599;</span>
+              <Link href="https://www.behance.net/aksharpatel24" target="_blank" className="group hover:text-white ">
+                Behance <span className="transform transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-45 hover:text-white  ">&#8599;</span>
               </Link>
-              <Link href="https://www.linkedin.com/in/akshar-patel-4a78b0217"  target="_blank" className="group">
-                LinkedIn <span className="transform transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-45">&#8599;</span>
+              <Link href="https://www.linkedin.com/in/akshar-patel-4a78b0217"  target="_blank" className="group hover:text-white ">
+                LinkedIn <span className="transform transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-45 hover:text-white  ">&#8599;</span>
               </Link>
             </div>
             <div className="flex flex-col text-xl font-neopixelregular tracking-wider md:text-3xl space-y-2 text-lime-500">
-              <Link href="https://wa.me/916352191174" target="_blank" className="group">
-                WhatsApp <span className="transform transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-45">&#8599;</span>
+              <Link href="https://wa.me/916352191174" target="_blank" className="group hover:text-white ">
+                WhatsApp <span className="transform transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-45 hover:text-white  ">&#8599;</span>
               </Link>
             </div>
-            <div className="cursor-pointer top-0 bottom-9 text-lime-500" onClick={handleMenuClick}>
+            <div className="cursor-pointer top-0 bottom-9 text-lime-500 hover:text-white " onClick={handleMenuClick}>
               <FaTimes size={35} color="#7CFC00"/>
             </div>
           </div>
