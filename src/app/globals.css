@@ -204,4 +204,34 @@ body {
   width: calc(200%); /* Double the width for seamless scrolling */
 }
 
+/* Swiper pagination dots default color */
+.swiper-pagination-bullet {
+  background-color: white; /* Default dot color */
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
 
+/* Swiper pagination active dot color */
+.swiper-pagination-bullet-active {
+  background-color: red; /* Active dot color */
+  transform: scale(1.2); /* Slightly larger for active state */
+}
+
+/* Swiper pagination dot hover effect */
+.swiper-pagination-bullet:hover {
+  background-color: green; /* Hover color for dots */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+ .animate-spin-slow {
+     animation: spin 20s linear infinite;
+   }
+
+   @keyframes spin {
+     from {
+       transform: rotate(0deg);
+     }
+     to {
+       transform: rotate(360deg);
+     }
+   }

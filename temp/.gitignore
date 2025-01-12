@@ -1,0 +1,234 @@
+# doted svg
+#  <svg style="position: absolute; width: 0; height: 0;">
+#    <filter id="unopaq" y="-100%" height="300%" x="-100%" width="300%">
+#      <feColorMatrix
+#        values="1 0 0 0 0
+#              0 1 0 0 0
+#              0 0 1 0 0
+#              0 0 0 5 0"
+#      ></feColorMatrix>
+#    </filter>
+#    <filter id="unopaq2" y="-100%" height="300%" x="-100%" width="300%">
+#      <feColorMatrix
+#        values="1 0 0 0 0
+#              0 1 0 0 0
+#              0 0 1 0 0
+#              0 0 0 10 0"
+#      ></feColorMatrix>
+#    </filter>
+#    <filter id="unopaq3" y="-100%" height="300%" x="-100%" width="300%">
+#      <feColorMatrix
+#        values="1 0 0 1 0
+#              0 1 0 1 0
+#              0 0 1 1 0
+#              0 0 0 2 0"
+#      ></feColorMatrix>
+#    </filter>
+#  </svg>
+
+feed bake
+# import React from 'react';
+# import styled from 'styled-components';
+
+# const Card = () => {
+#   return (
+#     <StyledWrapper>
+#       <section className="container">
+#         <div className="card">
+#           <div className="content">
+#             <p className="logo">Digital Way</p>
+#             <div className="h6">Data &amp; Infrastructure Agility</div>
+#             <div className="hover_content">
+#               <p>mParticle’s customer data platform empowers you to Integrate all of your data and orchestrate it across channels, partners, and systems.</p>
+#             </div>
+#           </div>
+#         </div>
+#       </section>
+#     </StyledWrapper>
+#   );
+# }
+
+# const StyledWrapper = styled.div`
+#   .container {
+#     height: 100%;
+#     display: flex;
+#     align-items: center;
+#     justify-content: center;
+#   }
+
+#   .card {
+#     position: relative;
+#     display: flex;
+#     justify-content: center;
+#     cursor: pointer;
+#     width: 22em;
+#     max-width: 80%;
+#     padding: 2em 0;
+#     background: #FFF;
+#     box-shadow: 0 0 6px 0 rgba(32, 32, 36, 0.12);
+#     transition: all 0.35s ease;
+#   }
+
+#   .card::before, .card::after {
+#     content: "";
+#     position: absolute;
+#     top: 0;
+#     left: 0;
+#     width: 100%;
+#     background: orange;
+#     height: 4px;
+#   }
+
+#   .card::before {
+#     width: 0;
+#     opacity: 0;
+#     transition: opacity 0 ease, width 0 ease;
+#     transition-delay: 0.5s;
+#   }
+
+#   .card::after {
+#     width: 100%;
+#     background: white;
+#     transition: width 0.5s ease;
+#   }
+
+#   .card .content {
+#     width: 18em;
+#     max-width: 80%;
+#   }
+
+#   .card .logo {
+#     margin: 0 0 1em;
+#     width: 10.625em;
+#     transition: all 0.35s ease;
+#   }
+
+#   .card .h6 {
+#     color: #999;
+#     font-weight: 600;
+#     text-transform: uppercase;
+#     margin: 0;
+#     letter-spacing: 2px;
+#   }
+
+#   .card .hover_content {
+#     overflow: hidden;
+#     max-height: 0;
+#     transform: translateY(1em);
+#     transition: all 0.55s ease;
+#   }
+
+#   .card .hover_content p {
+#     margin: 1.5em 0 0;
+#     color: #6E6E70;
+#     line-height: 1.4em;
+#   }
+
+#   .card:hover {
+#     width: 24em;
+#     box-shadow: 0 10px 20px 0 rgba(32, 32, 36, 0.12);
+#   }
+
+#   .card:hover::before {
+#     width: 100%;
+#     opacity: 1;
+#     transition: opacity 0.5s ease, width 0.5s ease;
+#     transition-delay: 0;
+#   }
+
+#   .card:hover::after {
+#     width: 0;
+#     opacity: 0;
+#     transition: width 0 ease;
+#   }
+
+#   .card:hover .logo {
+#     margin-bottom: 0.5em;
+#   }
+
+#   .card:hover .hover_content {
+#     max-height: 10em;
+#     transform: none;
+#   }`;
+
+# export default Card;
+
+
+
+Key Components:
+Customer Feedback Form (Invisible Online):
+
+Unique ID Input: A customer can enter a custom ID (e.g., SX-WB-0198-1025SXWA).
+Real-Time Fetching: As the customer types the ID, it’s checked in the database in real-time.
+Fetch Data: When the ID matches, the associated details (customer name, project name, project URL, work description, start/end time) are filled in non-editable fields.
+Permission Check: The system checks if the customer has permission to give feedback. If the permission is denied, a pop-up appears with a limit of 5 tries to gain access.
+Feedback Card Display (Home Page):
+
+Data Display: Each feedback card will display the client name, message, work description, and feedback date/time.
+Dynamic Cards: The feedback cards will have different color gradients on the image block, with 3 full cards and a 4th half card visible.
+Swipe Functionality: Forward and backward arrow buttons for navigation through the cards.
+Admin Approval Process:
+
+Limited Tries: Customers who don't have permission can try 5 times to gain access. If they fail, they will need admin approval.
+Feedback Submission: The system allows the customer to submit a short message (400 characters), and once submitted, the feedback can't be edited by the customer.
+Backend:
+Database:
+Store customer feedback, details like name, project name, URL, start/end times, feedback date/time.
+Permissions and feedback status will also be stored for each customer.
+Real-time data fetching and ID validation will be part of the logic.
+
+
+{/* Rotating SVG Background */}
+              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-0 opacity-50">
+              <svg
+                width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.5 99.5V0.50123C55.0557 0.769652 99.2303 44.9443 99.4988 99.5H0.5Z" stroke="url(#paint0_linear_332_164)" stroke-opacity="0.2"/>
+                <path d="M199.506 100.496V199.495C144.95 199.226 100.776 155.052 100.507 100.496H199.506Z" stroke="url(#paint1_linear_332_164)" stroke-opacity="0.2"/>
+                <path d="M100.502 0.496094L199.501 0.496094C199.232 55.0518 155.058 99.2265 100.502 99.4949L100.502 0.496094Z" stroke="url(#paint2_linear_332_164)" stroke-opacity="0.2"/>
+                <path d="M99.5 199.5L0.50123 199.5C0.769652 144.944 44.9443 100.77 99.5 100.501L99.5 199.5Z" stroke="url(#paint3_linear_332_164)" stroke-opacity="0.2"/>
+                <defs>
+                <linearGradient id="paint0_linear_332_164" x1="50" y1="0" x2="50" y2="100" gradientUnits="userSpaceOnUse">
+                <stop offset="0.2" stop-color="#E58A2D"/>
+                <stop offset="1" stop-color="#6A516C"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear_332_164" x1="150.006" y1="199.996" x2="150.006" y2="99.9961" gradientUnits="userSpaceOnUse">
+                <stop offset="0.2" stop-color="#E58A2D"/>
+                <stop offset="1" stop-color="#6A516C"/>
+                </linearGradient>
+                <linearGradient id="paint2_linear_332_164" x1="200.002" y1="49.9961" x2="100.002" y2="49.9961" gradientUnits="userSpaceOnUse">
+                <stop offset="0.2" stop-color="#E58A2D"/>
+                <stop offset="1" stop-color="#6A516C"/>
+                </linearGradient>
+                <linearGradient id="paint3_linear_332_164" x1="0" y1="150" x2="100" y2="150" gradientUnits="userSpaceOnUse">
+                <stop offset="0.2" stop-color="#E58A2D"/>
+                <stop offset="1" stop-color="#6A516C"/>
+                </linearGradient>
+                </defs>
+              </svg>
+
+
+
+              </div>
+const skills = [
+      {
+        name: "Wix Studio",
+        description: "Website builder and design platform",
+        progress: 85,
+        verifiedPartner: true,
+        logo: "/Image/Image-hero/wix-studio-logo.png", // Replace with actual logo path
+      },
+      {
+        name: "Figma",
+        description: "UI/UX design tool",
+        progress: 85,
+        verifiedPartner: false,
+        logo: "/Image/Image-hero/figma-logo.png", // Replace with actual logo path
+      },
+      {
+        name: "Blender",
+        description: "3D modeling, animation, and rendering software",
+        progress: 90,
+        verifiedPartner: false,
+        logo: "/Image/Image-hero/blender-logo.png", // Replace with actual logo path
+      },
+  ];

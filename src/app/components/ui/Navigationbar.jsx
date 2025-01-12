@@ -7,9 +7,9 @@ import { gsap } from "gsap";
 import { FaTimes, FaBars } from "react-icons/fa";
 
 const Menulinks = [
-  { title: "Home", link: "/" },
   { title: "About", link: "/about-us" },
-  { title: "Services", link: "/Service" },
+  { title: "Work", link: "/projects" },
+  { title: "Services", link: "/service" },
   { title: "Make Enquiry", link: "/enquiry" },
 ];
 

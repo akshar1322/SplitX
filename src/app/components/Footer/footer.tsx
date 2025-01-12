@@ -7,7 +7,7 @@ import gsap from "gsap";
 const Footer: React.FC = () => {
   const [currentYear, setCurrentYear] = useState<number>(new Date().getFullYear());
   const footerContentRef = useRef<HTMLDivElement>(null);
-  const scaleRef = useRef<HTMLDivElement>(null);
+  const svgRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
     if (footerContentRef.current) {
@@ -19,22 +19,12 @@ const Footer: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (scaleRef.current) {
-      gsap.to(scaleRef.current, {
-        scale: 1.1,
-        duration: 0.3,
-        ease: "power1.inOut",
-        paused: true,
+    if (svgRef.current) {
+      gsap.to(svgRef.current, {
+        rotation: 360,
+        duration: 20,
+        ease: "linear",
         repeat: -1,
-        yoyo: true,
-      });
-
-      scaleRef.current.addEventListener("mouseenter", () => {
-        gsap.to(scaleRef.current, { scale: 1.1, duration: 0.3 });
-      });
-
-      scaleRef.current.addEventListener("mouseleave", () => {
-        gsap.to(scaleRef.current, { scale: 1, duration: 0.3 });
       });
     }
   }, []);
@@ -55,18 +45,39 @@ const Footer: React.FC = () => {
       links: [
         { name: "Services", href: "/Service" },
         { name: "About", href: "/about-us" },
-        // { name: "UpdateHub", href: "/UpdateHub" },
-        { name: "Internship Hub", href: "https://chat.whatsapp.com/Jc3xZw5cCr4475qgz7kJhu" },
+        { name: "Just For Fun", href: "/just-for-fun" },
         { name: "Tea Time with Us", href: "/enquiry" },
       ]
     }
   ];
 
   return (
-    <footer className="bg-black font-PoppinsRegular text-white p-10 md:p-16 lg:p-24">
+    <footer className="relative bg-black font-PoppinsRegular text-white p-10 md:p-16 lg:p-24 overflow-hidden">
+      {/* Rotating SVG Background */}
+      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-0 opacity-50">
+        <svg
+          ref={svgRef}
+          width="350"
+          height="350"
+          viewBox="0 0 200 200"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <mask id="mask0_332_180" style={{ maskType: "luminance" }} maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="200">
+            <path d="M0 0H200V200H0V0Z" fill="white" />
+          </mask>
+          <g mask="url(#mask0_332_180)">
+            <path
+              d="M99.8886 91.8932L100.885 91.8967C105.333 41.2371 147.745 1.4705 199.499 1.21524C199.242 53.2111 159.103 95.7776 108.107 99.8886L108.103 100.885C158.762 105.333 198.529 147.745 198.785 199.499C146.789 199.242 104.222 159.103 100.111 108.107L99.1149 108.103C94.6667 158.762 52.2546 198.529 0.501236 198.785C0.757689 146.789 40.8956 104.222 91.8942 100.111L91.8977 99.1149C41.2381 94.6667 1.47051 52.2546 1.21524 0.501236C53.2111 0.757695 95.7776 40.8966 99.8886 91.8932ZM99.5119 99.8807L99.3848 100.389L99.8989 100.492L99.9039 100.493L100.394 100.591L100.492 100.101L100.493 100.096L100.613 99.498H100.003H99.998H99.6076L99.5129 99.8767L99.5119 99.8807Z"
+              stroke="#6A516C"
+            />
+          </g>
+        </svg>
+      </div>
+
       <div
         ref={footerContentRef}
-        className="footer-content flex flex-col md:flex-row justify-between items-start opacity-0 transform translate-y-10 duration-1000"
+        className="footer-content relative flex flex-col md:flex-row justify-between items-start opacity-0 transform translate-y-10 duration-1000 z-10"
       >
         {/* Left Links Section */}
         <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-16 mb-8 md:mb-0 w-full md:w-auto">
@@ -115,7 +126,7 @@ const Footer: React.FC = () => {
 
       {/* Bottom Copyright and Info */}
       <div className="flex flex-col md:flex-row justify-between items-center mt-8 font-PoppinsMedium text-sm text-gray-500 space-y-4  uppercase md:space-y-0">
-        <p> V SX-ACT 2.2.3</p>
+        <p> V SX-ACT 30r.mx.50.1</p>
         <p> © {currentYear} Splix llc. All rights reserved.</p>
         <div className="flex items-center  space-x-3">
           <span className="transform rotate-180 font-PoppinsThin transition-transform duration-300">🌐</span>

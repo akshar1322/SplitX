@@ -14,7 +14,10 @@ import WhereCreativityThrives from './components/ui/Section/WhereCreativityThriv
 import Navigationbar from './components/ui/Navigationbar';
 import DeviceCheck from './components/DeviceCheck';
 import TextSlidingEffect from './components/ui/Section/TextSlidingEffect';
-
+import Feedback from './components/ui/Cards/feedback'
+import SkillsSection from './components/ui/Section/SkillsSection';
+import FollowMe from './components/ui/Share/FollowMe'
+import OffersPopup from './components/ui/Cards/OffersPopup'
 export default function Home() {
   useDisableInspect();
   useDisableRightClick();
@@ -25,12 +28,16 @@ export default function Home() {
         <Navigationbar />
         <ScrollProgress />
         <Hero />
+        <OffersPopup/>
 
         <div className="relative z-30 no-scrollbar overflow-hidden bg-black">
           <FeaturedWork />
           <TextSlidingEffect title="Innovating today and tomorrow" />
           <Clients />
+          <SkillsSection/>
+          <Feedback/>
           {/* <WhereCreativityThrives /> */}
+          <FollowMe/>
           <Footer />
         </div>
       </DeviceCheck>

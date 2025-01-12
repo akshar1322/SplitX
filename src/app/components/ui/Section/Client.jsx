@@ -91,8 +91,7 @@ const Clients = () => {
           ))}
         </div>
 
-        {/* Bottom Green Line */}
-        <div className="w-full h-[5px] mt-10 rounded-tl-[45rem] bg-gradient-to-r from-transparent via-green-500 to-transparent blur-sm shadow-lg" />
+        
       </main>
     </div>
   );

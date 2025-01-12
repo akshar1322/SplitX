@@ -35,6 +35,7 @@ module.exports = {
       'dark-blue-1': '#1e3a8a',
       'charcoal': '#333333',
       'lawngreen': '#7CFC00',
+      'lemonyellow' :'#FAFA33',
 
     },
     }

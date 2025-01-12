@@ -15,35 +15,99 @@ import DeviceCheck from '../components/DeviceCheck';
 import PartnerCarousel from '../components/ui/Share/Partners';
 import useDisableInspect from '../hooks/disableInspect';
 import useDisableRightClick from '../hooks/useDisableRightClick';
+
 // Register GSAP ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const servicesData = [
   {
-    title: "Creative",
+    title: "Creative Design & Development",
     description:
-      "Unleash your brand’s potential with stunning designs and seamless functionality. From web development and online stores to mobile app design and development, we bring your ideas to life using platforms like Shopify, Wix, and Wix Studio.",
-    tags: ["Web Development", "Shopify", "Wix", "Mobile App Design", "Mobile App Development", "UI/UX"]
+      "Transform your brand’s identity with visually stunning designs and flawless functionality. From responsive web development and feature-rich online stores to innovative mobile app design and development, we craft solutions tailored to your needs using platforms like Shopify, Wix, and Wix Studio.",
+    tags: [
+      "Web Development",
+      "E-commerce",
+      "Shopify",
+      "Wix",
+      "Wix Studio",
+      "Mobile App Design",
+      "Mobile App Development",
+      "UI/UX Design",
+      "Brand Identity",
+      "Prototyping"
+    ]
   },
   {
-    title: "Development",
+    title: "Advanced Development",
     description:
-      "Empower your digital presence with cutting-edge technologies. Our expertise in React, Next.js, and JavaScript ensures efficient development, while Three.js and GSAP add dynamic and interactive elements to your projects.",
-    tags: ["React", "Next.js", "JavaScript", "HTML & CSS", "API Integration", "Three.js", "GSAP", "Framer Motion"]
+      "Empower your digital journey with modern technologies. Our expertise spans React, Next.js, and JavaScript for robust solutions, while tools like Three.js and GSAP add a touch of interactivity and visual dynamism to your projects.",
+    tags: [
+      "React",
+      "Next.js",
+      "JavaScript",
+      "HTML & CSS",
+      "API Integration",
+      "Three.js",
+      "GSAP",
+      "Framer Motion",
+      "Responsive Design",
+      "Custom Development"
+    ]
   },
   {
-    title: "3D & Editing",
+    title: "Immersive 3D Experiences",
     description:
-      "Transform your vision with immersive 3D designs and professional editing services. From modeling to animation, we help you create captivating visual content that stands out.",
-    tags: ["3D Modeling", "3D Animation", "Blender", "Video Editing", "After Effects", "Motion Graphics"]
+      "Bring your visions to life with exceptional 3D modeling, rendering, and animations. From product visualization to architectural designs and character creation, our expertise ensures visually captivating and highly engaging content.",
+    tags: [
+      "3D Modeling",
+      "3D Animation",
+      "Blender",
+      "3D Visualization",
+      "3D Rendering",
+      "Character Design",
+      "Motion Graphics",
+      "Product Visualization",
+      "Architectural Visualization",
+      "CGI",
+      "Visual Effects (VFX)",
+      "3D Printing Models"
+    ]
   },
   {
-    title: "Growth",
+    title: "Strategic Growth",
     description:
-      "Boost your online reach with tailored growth strategies. From SEO and analytics to performance optimization, we help you scale effectively and sustainably.",
-    tags: ["SEO", "Analytics", "Performance Optimization", "Marketing Strategy", "Content Creation"]
+      "Expand your online presence with data-driven growth strategies. From optimizing search engine performance and analytics to crafting impactful marketing campaigns, we help you achieve sustainable growth and measurable results.",
+    tags: [
+      "SEO",
+      "Analytics",
+      "Performance Optimization",
+      "Marketing Strategy",
+      "Content Creation",
+      "Social Media Marketing",
+      "Campaign Management",
+      "Brand Strategy",
+      "Digital Advertising"
+    ]
+  },
+  {
+    title: "Domain, Hosting & Management",
+    description:
+      "Streamline your online infrastructure with our comprehensive domain, hosting, and email management services. From securing your perfect domain name to providing reliable hosting solutions and professional email setup, we ensure your digital presence is seamless and hassle-free.",
+    tags: [
+      "Domain Registration",
+      "Web Hosting",
+      "Email Hosting",
+      "SSL Certificates",
+      "Server Management",
+      "Website Maintenance",
+      "DNS Management",
+      "Custom Email Setup",
+      "Cloud Hosting",
+      "Performance Monitoring"
+    ]
   }
 ];
+
 
 const projects = [
   { id: 1, name: 'B&Y', description: 'Logo, Branding, E-commerce, UX/UI', imageUrl: '/Projects/B&Y-2.jpg' },
@@ -98,6 +162,7 @@ const ServicePage = () => {
     <DeviceCheck>
     <Navigationbar/>
     <ScrollProgress/>
+
     <Headerimage
     backgroundImageUrl ="https://images.unsplash.com/photo-1589154831836-71fa41c229ce?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     text="Service"
@@ -153,14 +218,24 @@ const ServicePage = () => {
           </div>
         ))}
       </div>
-          <PartnerCarousel/>
+          {/* <PartnerCarousel/> */}
       {/* Image Reveal Animation */}
       <div className="min-h-screen pl-10  overflow-hidden bg-black text-white flex items-center justify-center">
-        <AnimatedImage
+
+        <Image
+        src={"/Image/work-partner.png"}
+        alt={"partner"}
+        width={1000}
+        height={1000}
+        className="object-contain"
+        />
+
+
+        {/* <AnimatedImage
           src="https://images.unsplash.com/photo-1649864728256-e1ce28877154?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Sample Animation"
           className="w-full h-[40rem] rounded-xl " // Adjust the container dimensions
-        />
+        /> */}
       </div>
 
       {/* Signature Projects Section */}

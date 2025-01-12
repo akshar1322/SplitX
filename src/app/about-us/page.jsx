@@ -11,6 +11,11 @@ import Headerimage from '../components/ui/Share/Headerimage';
 import DeviceCheck from '../components/DeviceCheck';
 import useDisableRightClick from '../hooks/useDisableRightClick';
 import useDisableInspect from '../hooks/disableInspect';
+import SkillsSection from'../components/ui/Section/SkillsSection'
+import StatsCard from '../components/ui/Share/StatsCard'
+import FollowMe from '../components/ui/Share/FollowMe'
+import EclipseBackground from '../components/ui/Share/EclipseBackground'
+import ScrollProgress from '../components/ui/ScrollProgress';
 
 const AboutUs = () => {
   useDisableRightClick()
@@ -42,11 +47,18 @@ const AboutUs = () => {
         }
       );
     });
+    gsap.to(".svg-rotate svg", {
+      rotate: 360,
+      repeat: -1,
+      duration: 10,
+      ease: "linear",
+    });
   }, []);
 
   return (
     <DeviceCheck>
-      <main className="bg-black">
+      <ScrollProgress/>
+      <main className="bg-black overflow-hidden">
         {/* Header */}
         <Navigationbar />
         <Headerimage
@@ -82,6 +94,33 @@ const AboutUs = () => {
 
             {/* Right Side Content (Image + Company Details) */}
             <div id="Image" className="md:w-80 p-4 left-60 relative group">
+              {/* Rotating SVG */}
+              <div className=" rotate-[59deg] absolute top-32 -right-full opacity-30">
+                <svg
+                  width="500"
+                  height="500"
+                  viewBox="0 0 200 199"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M99.5 99.5L0.5 99.5V50C0.5 22.6619 22.6619 0.5 50 0.5C77.3381 0.5 99.5 22.6619 99.5 50V99.5Z"
+                    stroke="#5E5E5E"
+                  />
+                  <path
+                    d="M99.5 99.5V198.5H50C22.6619 198.5 0.5 176.338 0.5 149C0.5 121.662 22.6619 99.5 50 99.5H99.5Z"
+                    stroke="#5E5E5E"
+                  />
+                  <path
+                    d="M99.5 99.5V0.5H150C177.338 0.5 199.5 22.6619 199.5 50C199.5 77.3381 177.338 99.5 150 99.5H99.5Z"
+                    stroke="#5E5E5E"
+                  />
+                  <path
+                    d="M99.5 99.5H199.5V149C199.5 176.332 176.845 198.5 149.5 198.5C122.155 198.5 99.5 176.332 99.5 149V99.5Z"
+                    stroke="#5E5E5E"
+                  />
+                </svg>
+              </div>
               <Image
                 src="/SVG/SplitXlogo-Main-black.svg"
                 alt="Founder"
@@ -89,11 +128,18 @@ const AboutUs = () => {
                 height={400}
                 className="rounded-lg shadow-lg transition-opacity duration-300"
               />
-
-
             </div>
           </div>
-
+          <div id="Image" className=" p-4  relative group">
+            <h2 className='uppercase p-4 text-6xl text-lime-500' >production tools</h2>
+            <Image
+            src="/Image/production-tools.png"
+            alt="Founder"
+            width={1000}
+            height={400}
+            className=" shadow-lg transition-opacity duration-300"
+          />
+          </div>
               {/* Company Details */}
               <div className="mt-6 p-6  text-white rounded-lg shadow-lg grid   gap-4">
             {/* Left Column */}
@@ -102,18 +148,20 @@ const AboutUs = () => {
                 <strong className='p-5 uppercase' >Name:</strong> Splix LLC.
               </p>
               <p>
-                <strong className='p-5'>Address:</strong> A-25/1, Gokul Nagar, near Jadshwar Mahdev Temple,
-                Adinathnagar, Odhav, Ahmedabad
+                <strong className='p-5'>Address:</strong> Ahmedabad
               </p>
-              <p>
+              {/* <p>
                 <strong className='p-5'>Postal Code:</strong> 382415
-              </p>
+              </p> */}
               <p>
                 <strong className='p-5'>Established:</strong> October 22, 2024
               </p>
               <p>
                 <strong className='p-5'>Founder & CEO:</strong> Akshar Patel
               </p>
+              {/* <p>
+                <strong className='p-5'>Founder & CEO:</strong> Akshar Patel
+              </p> */}
             </div>
 
             {/* Right Column */}
@@ -130,10 +178,13 @@ const AboutUs = () => {
             </div>
           </div>
 
-
         </div>
 
         {/* Footer */}
+        {/* <SkillsSection/>
+        <StatsCard/>
+                <FollowMe/>
+                <EclipseBackground sizePercentage={100} rows={19} columns={50} /> */}
         <Footer />
       </main>
     </DeviceCheck>
