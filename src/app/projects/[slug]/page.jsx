@@ -15,6 +15,8 @@
   import ScrollProgress from "../../components/ui/ScrollProgress";
   import Navigationbar from "../../components/ui/Navigationbar";
   import Error from "../../components/ui/Share/404Error";
+
+
   gsap.registerPlugin(ScrollTrigger);
 
   export default function ProjectDetailPage({ params }) {
@@ -22,7 +24,7 @@
 
     const project = projects.find(
       (proj) =>
-        proj.projectName.toLowerCase().replace(/\s+/g, "-") === slug
+        proj. projectId.toLowerCase().replace(/\s+/g, "-") === slug
     );
 
     if (!project) {
@@ -57,9 +59,9 @@
 
 
   // Filter and slice projects for display
-  const filteredProjects = projects
-  .filter((proj) => proj.category === 'web') // Example filter: only projects with category "web"
-  .slice(0, 2); // Limit to 2 projects
+  const allowedIds = [2, 3];
+  const filteredProjects = projects.filter(project => allowedIds.includes(project.id));
+
 
     return (
       <DeviceCheck>
@@ -67,13 +69,14 @@
         <Navigationbar/>
         <div className="bg-black text-white min-h-screen relative">
         <Headerimage
-          backgroundImageUrl="https://images.unsplash.com/photo-1646337426453-d6d57937fc3f?q=80&w=2070&auto=format&fit=crop"
+          backgroundImageUrl="https://images.unsplash.com/photo-1736296972130-e964c1cfe618?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           text={project.projectName}
         />
         <div className="px-4 py-16 max-w-7xl mx-auto relative">
           <div className="flex justify-between mb-12">
             <div>
               <h2 className="text-lg uppercase font-semibold">Client</h2>
+              <br />
               <p className="text-sm ">{project.clientName}</p>
               <br />
               <a
@@ -91,11 +94,11 @@
               </a>
             </div>
             <div>
-              <h2 className="text-lg uppercase font-semibold">What we worked on</h2>
-              <p className="text-sm">{project.whatWeWork}</p>
+              <h2 className="text-lg uppercase font-semibold">What we worked on</h2> <br />
+              <p className="text-sm w-[30rem] capitalize">{project.whatWeWork}</p>
             </div>
             <div>
-              <h2 className="text-lg uppercase font-semibold">Year</h2>
+              <h2 className="text-lg uppercase font-semibold">Year</h2> <br />
               <p className="text-sm">{project.year}</p>
             </div>
           </div>
@@ -121,13 +124,13 @@
           {/* Description Section */}
           <section className="relative z-20 uppercase bg-black py-20">
             <div className="w-1/2 pr-4">
-              <p className="mb-8">{project.descriptions}</p>
+              <p className="mb-8">{project.description}</p>
             </div>
           </section>
 
           {/* 2 Column Images */}
           <div className="image-container grid grid-cols-2 gap-4 mb-8 relative z-10">
-            {project.images.slice(3, 8).map((img, index) => (
+            {project.images.slice(3, 9).map((img, index) => (
               <Image
                 key={index}
                 src={img}
@@ -151,7 +154,7 @@
 
           {/* Last Images */}
           <div className="parallax-container mb-8 relative z-10">
-            {project.images.slice(8).map((img, index) => (
+            {project.images.slice(9).map((img, index) => (
               <div
                 key={index}
                 className="parallax-image mt-20 pt-10 mb-8 h-[40rem] bg-fixed bg-center rounded-lg p-4 flex items-center justify-center"

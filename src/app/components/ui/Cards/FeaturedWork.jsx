@@ -49,21 +49,21 @@ const FeaturedWork = () => {
       id: 1,
       title: "Invoice-Mate",
       description: "WebApp Development, Management and tracking",
-      link: "projects/ui",
+      link: "/projects/invoicemate",
       image: "/Projects/Invoice-Mate.svg", // Example image path
     },
     {
       id: 2,
       title: "Wobble Chat",
       description: "ChatingApp Development, UI/UX",
-      link: "/projects/ui",
+      link: "/projects/wobblechat",
       image: "/Projects/Wobble-Chat.svg", // Example image path
     },
     {
       id: 3,
       title: "Entire Games",
       description: "Gaming Studio Development, UI/UX",
-      link: "projects/ui",
+      link: "projects/entiregames",
       image: "/Projects/entire-games.svg", // Example image path
     },
   ];
