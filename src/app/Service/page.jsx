@@ -171,7 +171,7 @@ const ServicePage = () => {
     text="Service"
     />
     <div className="min-h-screen font-PoppinsRegular bg-black text-white">
-      {/* Small Title */}
+      {/* Small Title */} 
 
 
       <div className="flex justify-end px-10 py-6">
