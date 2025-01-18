@@ -15,6 +15,8 @@ import DeviceCheck from '../components/DeviceCheck';
 import PartnerCarousel from '../components/ui/Share/Partners';
 import useDisableInspect from '../hooks/disableInspect';
 import useDisableRightClick from '../hooks/useDisableRightClick';
+import projects from "../data/projectsData";
+import ProjectCard from '../components/ui/Cards/ProjectCard';
 
 // Register GSAP ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -109,10 +111,11 @@ const servicesData = [
 ];
 
 
-const projects = [
-  { id: 1, name: 'B&Y', description: 'Logo, Branding, E-commerce, UX/UI', imageUrl: '/Projects/B&Y-2.jpg' },
-  { id: 2, name: 'Sounds Scape', description: 'Logo, Web&Apps, Music, UX/UI', imageUrl: '/Projects/Sounds-scape-2.jpg' },
-];
+
+// Filter and slice projects for display
+const allowedIds = [1, 2];
+const filteredProjects = projects.filter(project => allowedIds.includes(project.id));
+
 
 const ServicePage = () => {
   useDisableInspect()
@@ -242,20 +245,9 @@ const ServicePage = () => {
       <div className="px-10 py-20">
         <h3 className="text-3xl lg:text-7xl font-PoppinsBold text-balance mb-10">Signature Projects</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {projects.map((project) => (
-            <div key={project.id} className="bg-transparent p-6 rounded-lg project-card shadow-lg">
-              <div className="relative w-full h-96">
-                <Image
-                  src={project.imageUrl}
-                  alt={project.name}
-                  layout="fill"
-                  className="object-cover rounded-lg"
-                />
-              </div>
-              <h4 className="text-xl lg:text-2xl font-PoppinsBold mt-4">{project.name}</h4>
-              <p className="text-gray-400 text-lg font-PoppinsLight  lg:text-md">{project.description}</p>
-            </div>
-          ))}
+        {filteredProjects.map((project) => (
+              <ProjectCard key={project.id} {...project} />
+            ))}
         </div>
         <AnimatedSVG/>
         <FAQSection/>
