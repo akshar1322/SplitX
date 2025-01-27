@@ -18,6 +18,7 @@ import Feedback from './components/ui/Cards/feedback'
 import SkillsSection from './components/ui/Section/SkillsSection';
 import FollowMe from './components/ui/Share/FollowMe'
 import OffersPopup from './components/ui/Cards/OffersPopup'
+import StatsCards from './components/ui/Share/StatsCards'
 export default function Home() {
   useDisableInspect();
   useDisableRightClick();
@@ -35,6 +36,7 @@ export default function Home() {
           <TextSlidingEffect title="Innovating today and tomorrow" />
           <Clients />
           <SkillsSection/>
+          <StatsCards/>
           <Feedback/>
           {/* <WhereCreativityThrives /> */}
           <FollowMe/>
