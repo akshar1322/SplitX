@@ -12,7 +12,7 @@ import DeviceCheck from '../components/DeviceCheck';
 import useDisableRightClick from '../hooks/useDisableRightClick';
 import useDisableInspect from '../hooks/disableInspect';
 import SkillsSection from'../components/ui/Section/SkillsSection'
-import StatsCard from '../components/ui/Share/StatsCard'
+import StatsCards from '../components/ui/Share/StatsCards'
 import FollowMe from '../components/ui/Share/FollowMe'
 import EclipseBackground from '../components/ui/Share/EclipseBackground'
 import ScrollProgress from '../components/ui/ScrollProgress';
@@ -182,7 +182,7 @@ const AboutUs = () => {
 
         {/* Footer */}
         {/* <SkillsSection/>
-        <StatsCard/>
+        <StatsCards/>
                 <FollowMe/>
                 <EclipseBackground sizePercentage={100} rows={19} columns={50} /> */}
         <Footer />
