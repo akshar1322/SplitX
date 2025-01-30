@@ -9,7 +9,7 @@ import { FaTimes, FaBars } from "react-icons/fa";
 const Menulinks = [
   { title: "About", link: "/about-us" },
   { title: "Work", link: "/projects" },
-  { title: "Services", link: "/Service" },
+  { title: "Services", link: "/service" },
   { title: "Make Enquiry", link: "/enquiry" },
 ];
 
