@@ -117,7 +117,7 @@ const allowedIds = [1, 2];
 const filteredProjects = projects.filter(project => allowedIds.includes(project.id));
 
 
-const ServicePage = () => {
+const Service = () => {
   useDisableInspect()
   useDisableRightClick()
   useEffect(() => {
@@ -259,4 +259,4 @@ const ServicePage = () => {
   );
 };
 
-export default ServicePage;
+export default Service;

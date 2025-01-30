@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
     {
       title: "NAVIGATION",
       links: [
-        { name: "Services", href: "/service" },
+        { name: "Services", href: "/services" },
         { name: "About", href: "/about-us" },
         { name: "Just For Fun", href: "/just-for-fun" },
         { name: "Tea Time with Us", href: "/enquiry" },
@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
 
       {/* Bottom Copyright and Info */}
       <div className="flex flex-col md:flex-row justify-between items-center mt-8 font-PoppinsMedium text-sm text-gray-500 space-y-4  uppercase md:space-y-0">
-        <p> V SX-ACT 30r.mx.50.0</p>
+        <p> V SX-ACT 30r.mx.50.05</p>
         <p> © {currentYear} Splix llc. All rights reserved.</p>
         <div className="flex items-center  space-x-3">
           <span className="transform rotate-180 font-PoppinsThin transition-transform duration-300">🌐</span>
