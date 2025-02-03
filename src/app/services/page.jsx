@@ -107,7 +107,24 @@ const servicesData = [
       "Cloud Hosting",
       "Performance Monitoring"
     ]
+  },
+  {
+    "title": "3D Product Services",
+    "description": "Enhance your brand with high-quality 3D product visuals. We offer cutting-edge 3D modeling, rendering, and animations to showcase your products with stunning detail and realism, perfect for e-commerce, marketing, and interactive experiences.",
+    "tags": [
+      "3D Product Modeling",
+      "3D Product Rendering",
+      "3D Animation",
+      "AR/VR Integration",
+      "360° Product View",
+      "Photorealistic Rendering",
+      "E-commerce 3D Models",
+      "Custom 3D Visuals",
+      "Product Prototyping",
+      "Concept Design"
+    ]
   }
+
 ];
 
 

@@ -172,6 +172,8 @@ const AboutUs = () => {
                 <li className="pl-2">Web Application Development</li>
                 <li className="pl-2">Mobile Application Development</li>
                 <li className="pl-2">UX/UI Design</li>
+                <li className="pl-2">3D Product Design</li>
+                <li className="pl-2">3D Product Animation</li>
                 <li className="pl-2">Markting</li>
                 <li className="pl-2">Branding</li>
               </ul>
